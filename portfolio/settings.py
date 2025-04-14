@@ -28,8 +28,10 @@ DEBUG = False
 ALLOWED_HOSTS = ['www.domicpm.site', 'domicpm.site', 'portfolio-logq.onrender.com', 'localhost', '127.0.0.1']
 
 STATICFILES_DIRS = [
-    BASE_DIR / "portfolio" / "myPortfolio" / "static",
+    BASE_DIR / "myPortfolio" / "static",  # Verzeichnis für statische Dateien
+    BASE_DIR / "myPortfolio" / "static" / "images",  # Zusätzlicher Ordner für Bilder, falls notwendig
 ]
+
 
 
 # Application definition
