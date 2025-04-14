@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-lq0x8hhx#m+6dl@*=mqgcyme^&l2c(u7*gqsqv_#m%0((#c1ml'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'domicpm.site', 'www.domicpm.site']
 
 STATICFILES_DIRS = [
     BASE_DIR / "myPortfolio" / "static",  
