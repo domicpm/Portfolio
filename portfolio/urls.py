@@ -17,7 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from myPortfolio.views import myportfolio
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('myPortfolio/', myportfolio)
+    path('', myportfolio),  # Hier wird der Root-Pfad ("/") auf die myportfolio-Ansicht verwiesen.
+    path('myPortfolio/', myportfolio),  # Diese Route bleibt ebenfalls bestehen, falls du explizit "/myPortfolio/" verwenden möchtest.
 ]
