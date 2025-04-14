@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-lq0x8hhx#m+6dl@*=mqgcyme^&l2c(u7*gqsqv_#m%0((#c1ml
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.domicpm.site', 'domicpm.site' 'portfolio-logq.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['www.domicpm.site', 'domicpm.site', 'portfolio-logq.onrender.com', 'localhost', '127.0.0.1']
 
 STATICFILES_DIRS = [
     BASE_DIR / "myPortfolio" / "static",  
