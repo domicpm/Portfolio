@@ -23,18 +23,13 @@
     header {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       justify-content: space-between;
       padding: 20px;
       background-color: #e0e0e0;
       position: relative;
     }
 
-    .menu-button {
-      font-size: 30px;
-      cursor: pointer;
-      background: none;
-      border: none;
-    }
 
     h1 {
       margin: 0;
@@ -64,13 +59,13 @@
   transition: fill 0.3s, transform 0.3s;
 }
 
-/* Hover-Effekt: größer skalieren + Farbänderung */
+
 .social-icons a:hover svg {
   fill: #050505;
   transform: scale(1.2);
 }
 
-    /* Bild außerhalb vom Header zentrieren */
+    
     main {
       text-align: center;
       margin-top: 30px;
@@ -78,9 +73,11 @@
     }
 
     main img {
-      border-radius: 50%;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
 
     .intro {
       max-width: 750px;
@@ -93,7 +90,7 @@
       color: #fff;
       font-size: 1.1em;
       line-height: 1.6;
-      text-align: left;
+      text-align:left;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
 
@@ -118,7 +115,33 @@
       transform: scale(1.05);
     }
 
-    /* Mobile Menu */
+    @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: left;
+    text-align: center;
+    gap: 10px;
+  }
+
+  h1 {
+    position: static;
+    transform: none;
+    margin-top: 1px;
+    font-size:xx-large;
+  }
+
+  nav {
+    flex-direction:row;
+    gap: 0.1px;
+  }
+
+  main img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+}
+
     .menu {
       display: none;
       position: fixed;
@@ -162,7 +185,6 @@
     </div>
   </header>
 
-  <!-- 🔽 Bild außerhalb vom Header, zentriert -->
   <main>
     <img src="{% static 'images/foto.jpeg' %}" width="500" style="border-radius: 50%; box-shadow: 0 0 10px rgba(0,0,0,0.1);" />
     <div class="intro">
@@ -171,15 +193,7 @@
       <p>This website is my first project using Python and Django, and my second web-based application overall. I built it to get hands-on experience and also to introduce myself and showcase a few things I've worked on.</p>
       <p>Thanks for visiting, and feel free to reach out!</p>
     </div>
-
-    <!-- Navigation links -->
   
 
-  <script>
-    function toggleMenu() {
-      const menu = document.querySelector('.menu');
-      menu.classList.toggle('active');
-    }
-  </script>
-</body>
+ </body>
 </html>
