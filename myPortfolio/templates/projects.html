@@ -9,180 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: "Fira Code", monospace;
-      font-weight: 800;
-      font-style: normal;
-      font-size: large;
-      margin: 0;
-      padding: 0;
-      background-color: #525252;
-    }
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
 
-    header {
-      display: flex;
-      align-items: center;
-      font-family: "Fira Code", monospace;
-      ;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      padding: 20px;
-      background-color: #e0e0e0;
-      position: relative;
-    }
-
-
-    h1 {
-      margin: 0;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-    }
-
-    .social-icons {
-  display: flex;
-  gap: 15px;
-}
-
-.social-icons a {
-  color: #000;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  transition: transform 0.3s;
-}
-
-.social-icons svg {
-  width: 24px;
-  height: 24px;
-  fill: #000;
-  transition: fill 0.3s, transform 0.3s;
-}
-
-
-.social-icons a:hover svg {
-  fill: #525252;
-  transform: scale(1.2);
-}
-
-    
-main {
-  text-align: center;
-  margin-top: 75px;
-  padding: 0 15px;
-  color: #ffffff;
-}
-
-    main img {
-      border-radius: 50%;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-    .intro {
-      max-width: 850px;
-      margin: 30px auto;
-      padding: 20px;
-      font-family: "Fira Code", monospace;
-      font-weight: 500;
-      align-items: center;
-      border-radius: 12px;
-      background-color: #464545;
-      color: #fff;
-      font-size: 1.0em;
-      line-height: 1.4;
-      text-align:left;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    }
-
-.intro a:visited {
-  color: rgb(241, 241, 241);
-}
-.intro a:hover{
-  color: black;
-}
-
-    nav {
-      display: flex;
-      gap: 20px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #000;
-      font-size: 1.1em;
-      padding: 10px 15px;
-      background-color: #e0e0e0;
-      border-radius: 5px;
-      transition: background-color 0.3s, color 0.3s, transform 0.2s;
-    }
-
-    nav a:hover {
-      background-color: #525252;
-      color: #fff;
-  transform: scale(1.2);
-    }
-
-    @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: left;
-    text-align: center;
-    gap: 10px;
-  }
-  .intro {
-  margin: 20px 20px; /* zentriert es horizontal */
-  padding: 20px;
-  max-width: 95%; /* optional, falls du auf kleineren Geräten etwas mehr Breite möchtest */
-}
-
-  h1 {
-    position: static;
-    transform: none;
-    margin-top: 1px;
-    font-size:xx-large;
-  }
-
-
-  nav {
-    flex-direction:row;
-    gap: 0.1px;
-  }
-
-  main img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-  }
-}
-
-    .menu {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: -250px;
-      width: 250px;
-      height: 100%;
-      background-color: #e0e0e0;
-      padding: 20px;
-      flex-direction: column;
-      gap: 10px;
-      transition: left 0.3s ease;
-      z-index: 1000;
-    }
-    #particles-js {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  background-color: #525252; /* Dein Hintergrund-Farbton */
-}
-
-
-  </style>
 </head>
 <body>
     <div style="width: 180px;"></div> 
@@ -215,7 +43,7 @@ main {
 
   <main>
 
-    <div class="intro">
+    <div class="introP">
 
         <img src="{% static 'images/expertsgpt_ui.png' %}" width="850" style = "border-radius: 0%;" />
         <p>ExpertsGPT is a web application I developed as part of my Bachelor's thesis titled:
@@ -226,7 +54,7 @@ tailored to different areas of software engineering. Each chatbot is configured 
 The application allows adjusting different API parameters and
 was used as part of an empirical evaluation to explore how LLMs like ChatGPT can support practical software engineering workflows.
       </div>
-      <div class="intro">
+      <div class="introP">
         <img src="{% static 'images/sdcgif.gif' %}" width="850" alt="Demo Animation" style="border-radius: 0%;" />
         <p> SDC Fighter is a ....</p>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
