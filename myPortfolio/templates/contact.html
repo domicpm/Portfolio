@@ -11,8 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: "Anton", sans-serif;
-      font-weight: 400;
+      font-family: "Fira Code", monospace;
+      font-weight: 800;
       font-style: normal;
       font-size: large;
       margin: 0;
@@ -23,6 +23,8 @@
     header {
       display: flex;
       align-items: center;
+      font-family: "Fira Code", monospace;
+      ;
       flex-wrap: wrap;
       justify-content: space-between;
       padding: 20px;
@@ -61,14 +63,15 @@
 
 
 .social-icons a:hover svg {
-  fill: #050505;
+  fill: #525252;
   transform: scale(1.2);
 }
 
     
     main {
       text-align: center;
-      margin-top: 30px;
+      margin-top: 75px;
+      margin-left: 15px;
       color: #ffffff;
     }
 
@@ -77,21 +80,28 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-
     .intro {
-      max-width: 750px;
+      max-width: 650px;
       margin: 30px auto;
       padding: 20px;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-family: "Fira Code", monospace;
+      font-weight: 500;
       align-items: center;
-      background-color: #3a3a3a;
       border-radius: 12px;
+      background-color: #464545;
       color: #fff;
-      font-size: 1.1em;
-      line-height: 1.6;
+      font-size: 1.0em;
+      line-height: 1.4;
       text-align:left;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
+
+.intro a:visited {
+  color: rgb(241, 241, 241);
+}
+.intro a:hover{
+  color: black;
+}
 
     nav {
       display: flex;
@@ -109,9 +119,9 @@
     }
 
     nav a:hover {
-      background-color: #070707;
+      background-color: #525252;
       color: #fff;
-      transform: scale(1.05);
+  transform: scale(1.2);
     }
 
     @media (max-width: 768px) {
@@ -128,6 +138,7 @@
     margin-top: 1px;
     font-size:xx-large;
   }
+
 
   nav {
     flex-direction:row;
@@ -155,20 +166,30 @@
       transition: left 0.3s ease;
       z-index: 1000;
     }
+    #particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: #525252; /* Dein Hintergrund-Farbton */
+}
 
 
   </style>
 </head>
 <body>
     <div style="width: 180px;"></div> 
-
+      <div id="particles-js"></div>
+    
   <header>
       <nav>
-      <!-- template.html -->
 <a href="{% url 'home' %}">Home</a>
 <a href="{% url 'about' %}">About Me</a>
 <a href="{% url 'projects' %}">Projects</a>
 <a href="{% url 'contact' %}">Contact</a>
+
 
     </nav>
     <h1>Contact</h1>
@@ -188,14 +209,61 @@
   </header>
 
   <main>
-    <img src="{% static 'images/schwall.jpeg' %}" width="500" style="border-radius: 50%; box-shadow: 0 0 10px rgba(0,0,0,0.1);" />
-    <div class="intro">
-     *contact page* Work in progress...
-    </div>
-    <img src="{% static 'images/gerri.jpeg' %}" width="500" style="border-radius: 50%; box-shadow: 0 0 10px rgba(0,0,0,0.1);" />
-    <img src="{% static 'images/schulle.jpeg' %}" width="500" style="border-radius: 50%; box-shadow: 0 0 10px rgba(0,0,0,0.1);" />
-    <img src="{% static 'images/axel.jpeg' %}" width="500" style="border-radius: 50%; box-shadow: 0 0 10px rgba(0,0,0,0.1);" />
 
+    <div class="intro">
+
+     Text
+    </div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS("particles-js", {
+        "particles": {
+          "number": {
+            "value": 80,
+            "density": {
+              "enable": true,
+              "value_area": 800
+            }
+          },
+          "color": {
+            "value": "#ffffff"
+          },
+          "shape": {
+            "type": "circle"
+          },
+          "opacity": {
+            "value": 0.2,
+            "random": true
+          },
+          "size": {
+            "value": 2.5,
+            "random": true
+          },
+          "move": {
+            "enable": true,
+            "speed": 1,
+            "direction": "none",
+            "straight": false,
+            "out_mode": "out"
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": false
+            },
+            "onclick": {
+              "enable": false
+            },
+            "resize": false
+          }
+        },
+        "retina_detect": false
+      });
+    </script>
+    
+    
 
  </body>
 </html>
