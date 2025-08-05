@@ -1,0 +1,1 @@
+staticfiles/images/sdcgif.gif filter=lfs diff=lfs merge=lfs -text
