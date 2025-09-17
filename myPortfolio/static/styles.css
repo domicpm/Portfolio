@@ -198,3 +198,19 @@ top: 0;
 left: 0;
 background-color: #525252; /* Dein Hintergrund-Farbton */
 }
+.nav-left {
+    display: flex;
+    flex-direction: column; /* alle Links untereinander */
+    gap: 10px; /* Abstand zwischen den Links */
+    padding: 20px;
+}
+
+.sub-link {
+    margin-left: 10px; /* optional, um es leicht eingerückt zu zeigen */
+    font-size: 0.9em;  /* optional, kleiner als Hauptlinks */
+}
+
+
+
+
+

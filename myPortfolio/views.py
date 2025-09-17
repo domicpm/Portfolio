@@ -12,3 +12,6 @@ def projects(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+def arcanox(request):
+    return render(request, 'arcanox.html')

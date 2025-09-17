@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from myPortfolio.views import about, myportfolio, projects, contact
+from myPortfolio.views import about, myportfolio, projects, contact, arcanox
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,6 +24,6 @@ urlpatterns = [
     path('about/', about, name='about'),
     path('projects/', projects, name='projects'),
     path('contact/', contact, name='contact'),
-
+    path('arcanox/', arcanox, name= 'arcanox')
 
 ]
